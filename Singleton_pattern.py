@@ -1,20 +1,20 @@
-class mainClass:
+class MainClass:
 
     only_instance = None
 
     @staticmethod
     def getInstance():
-        if not mainClass.only_instance:
-            mainClass()
-        return mainClass.only_instance
+        if not MainClass.only_instance:
+            MainClass()
+        return MainClass.only_instance
 
     def __init__(self):
-        if mainClass.only_instance:
+        if MainClass.only_instance:
             print("Instance already created ")
         else:
-            mainClass.only_instance = self
+            MainClass.only_instance = self
 
 if __name__ == '__main__':
-    obj = mainClass()
-    print(mainClass.getInstance())
+    obj = MainClass()
+    print(MainClass.getInstance())
     print(obj)
